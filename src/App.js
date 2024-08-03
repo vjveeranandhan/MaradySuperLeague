@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import  {BrowserRouter, Routes, Route} from  "react-router-dom";
+import Navbar from './components/Navbar';
+import Players from './components/Players/Players';
+import Login from './components/Login/Login'
+import Signup from './components/Signup/Signup';
+// function App() {
+//   return (
+    
+//     <div>
+//     <Navbar/>
+//     <Login/>
+//     </div>
+//   );
+// }
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+    <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        {/* <Navbar/> */}
+        {/* <Route path="/" exact element={<Home/>} /> */}
+        <Route path="/login" element={<Login/>} />
+        <Route path="/players" element={<Players/>} />
+        <Route path="/signup" element={<Signup/>} />
+        {/* <Route path="/logout" element={<Logout/>} />
+        <Route path="/profile" element={<Profile/>} />
+        <Route path="/club" element={<CreateClub/>} />
+        <Route path="/my-tournaments" element={<MyTournaments/>} />
+        <Route path="/tournament-invitations" element={<TournamentInvitations/>} /> */}
+      </Routes>
+    </BrowserRouter>
+	);
 }
+
 
 export default App;

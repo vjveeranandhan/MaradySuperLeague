@@ -1,0 +1,42 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    display: flex;
+    justify-content: center; /* horizontally center */
+    align-items: center; /* vertically center */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent; 
+}
+
+.modal-content {
+    background: #fff; /* white background for content */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%; /* adjust as needed */
+    text-align: center; /* center align content */
+}
+
+.close-modal {
+    margin-bottom: 10px; /* space below button */
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(202, 202, 202);
+    background-color: #ebebeb; /* red button color */
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+p {
+    margin-top: 10px; /* space above paragraph */
+}

@@ -1,0 +1,67 @@
+/* LoginForm.css */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10vh; /* Adjust as needed */
+}
+
+.login-form {
+  text-align: center;
+  background-color:transparent; /* White background with 80% opacity */
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%; /* Adjust width as needed */
+  max-width: 400px; /* Optional: Set max-width for the form */
+  margin-bottom: 20px; /* Optional: Add bottom margin */
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #000000; /* Black text color */
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%; /* Take full width of parent */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text color */
+}
+
+.login-form button {
+  background-color: #ffffff; /* White background */
+  color: #000000; /* Black text color */
+  border: none;
+  cursor: pointer;
+  width: 100%; /* Take full width of parent */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.login-form button:hover {
+  background-color: #2c7aee; /* Hover background color */
+  border-color: #2c7aee;
+  color: #ffffff; /* Text color on hover */
+}
+
+.login-container a {
+  color: #06c; /* Link color */
+}
+
+
+/* ---------------------------------------- */
