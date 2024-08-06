@@ -30,17 +30,16 @@ const ApiService = {
       return apiClient.post(endpoint);
       }
       },
-  updateUserData(endpoint, data, token){
-    console.log("Inside updateUserData", endpoint)
-    if (token){
-      apiClient.defaults.headers.common['Authorization'] = `Token ${token}`;
-      return apiClient.put(endpoint, data);
-      }
-    else{
-      console.log("Inside updateUserData", endpoint)
-      return apiClient.post(endpoint);
-      }
-      }
+      updateUserData(endpoint, data, token) {
+        console.log("Inside updateUserData", endpoint);
+        const config = {
+            headers: {
+                'Authorization': `Token ${token}`,
+                'Content-Type': 'multipart/form-data'
+            }
+        };
+        return apiClient.put(endpoint, data, config);
+    }
 };
 
 export default ApiService;

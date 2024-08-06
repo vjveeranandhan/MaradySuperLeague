@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import './Login.css';
-// import ApiService from '../apiService/apiService';
+import ApiService from '../apiService/apiService';
 import Popup from '../PopUp/Popup';
 
 const LoginForm = () => {
@@ -22,25 +22,25 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     localStorage.setItem('token', '');
-    // try {
-    //   const response = await ApiService.register('/api/user-login/', formData, localStorage['token']);
-    //   setFormData({
-    //     username: "",
-    //     password: "",
-    //   });
-    //   localStorage.setItem('token', response.data.token);
-    //   localStorage.setItem('user', response.data.user_id);
-    //   window.location.reload();
-    //   window.location.href = '/';
+    try {
+      const response = await ApiService.register('/api/user-login/', formData, localStorage['token']);
+      setFormData({
+        username: "",
+        password: "",
+      });
+      localStorage.setItem('token', response.data.token);
+      localStorage.setItem('user', response.data.user_id);
+      window.location.reload();
+      window.location.href = '/';
 
-    // } catch (error) {
-    //   console.error('Error fetching data:', error);
-    //   if (error.response && error.response.data && error.response.data.message) {
-    //     setErrortext(error.response.data.message);
-    //   } else {
-    //     setErrortext('Something went wrong. Please try again later.');
-    //   }
-    // }
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      if (error.response && error.response.data && error.response.data.message) {
+        setErrortext(error.response.data.message);
+      } else {
+        setErrortext('Something went wrong. Please try again later.');
+      }
+    }
   };
 
   const handlePopupClose = () => {

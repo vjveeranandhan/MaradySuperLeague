@@ -18,7 +18,7 @@ function Navbar() {
   return (
     <nav className="nav">
       <a href="/" className="nav__brand">
-        herdoy
+        MSL
       </a>
       <ul className={active}>
         {/* <li className="nav__item">
@@ -29,6 +29,11 @@ function Navbar() {
         <li className="nav__item">
           <a href="/players" className="nav__link">
             Players
+          </a>
+        </li>
+        <li className="nav__item">
+          <a href="/profile" className="nav__link">
+            Profile
           </a>
         </li>
         {/* <li className="nav__item">
