@@ -2,7 +2,7 @@ import axios from 'axios';
 axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
 
 const apiClient = axios.create({
-    baseURL: 'http://3.90.26.72:8000/',
+    baseURL: 'http://107.21.158.38:8000/',
     headers: {
       'Content-Type': 'application/json',
     },
